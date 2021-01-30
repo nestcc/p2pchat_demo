@@ -1,10 +1,3 @@
-struct AddrNode {
-    struct AddrNode *next, *prev;
-    struct sockaddr *addr;
-    char name[20];
-    int cnt;
-};
-
 // #define FL_SYNSENT 0x001
 #define FL_ONLINE 0x003
 
@@ -22,8 +15,8 @@ struct UNode {
 struct User {
     char uname[20];
     char ip[20];
-    int fd;
-    int online;
+    // int fd;
+    // int online;
 };
 
 
@@ -39,6 +32,8 @@ struct PkgHeader {
 #define CHAT_FIN 0x004
 #define CHAT_HRT 0x008
 #define CHAT_MSG 0x016
+#define CHAT_PRI 0x032
+#define CHAT_SYS 0x064
 
 
 struct Message {
